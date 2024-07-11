@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="./style.css" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+		<title>SNCD Sign Up</title>
+	</head>
+	<body>
+        <div class="main container">
+            <div class="left panel">
+                <img class="logo" src="./images/SNCD.svg" alt="Site Logo" height="14%">
+                <div class="small cite">
+                    <cite>Image generated with Midjourney</cite>
+                </div>       
+            </div>
+            <div class="right panel">
+                <h1>Create a New Account</h1>
+                <form method="post">
+                    <section class="input-field">
+                        <label for="name">Full Name:</label>
+                        <span class="hint hidden"> enter first and last name.</span>
+                        <input id="name" type="text" autocomplete="name" autocapitalize="words">
+                       
+                    </section>      
+                    <section class="input-field">
+                        <label for="email">Email:</label>
+                        <span class="hint hidden"> enter a valid email.</span>
+                        <input id="email" type="email" autocomplete="email">
+                    </section>
+                    <section class="input-field password-field">
+                        <label>Password:</label>
+                        <span class="hint hidden">
+                            <p class="hint length hidden">1. Must be 8 characters or more.</p>
+                            <p class="hint letter hidden">2. Must contain a letter.</p>
+                            <p class="hint number hidden">3. Must contain a number.</p>
+                        </span>
+                        <input id="password" type="new-password" autocomplete="off">
+                        <button type="button" class="show-password" name="show-password">
+                            <img src="./images/open-eye-icon.png">
+                        </button>
+                        <button type="button" class="hide-password hidden" name="hide-password">
+                            <img src="./images/closed-eye-icon.png">
+                        </button>
+                    </section>                
+                    <section class="input-field password-field">
+                        <label>Confirm Password:</label>
+                        <span class="hint hidden"> passwords must match.</span>
+                        <input type="new-password" autocomplete="off">
+                        <button type="button" class="show-password" name="show-password">
+                            <img src="./images/open-eye-icon.png">
+                        </button>
+                        <button type="button" class="hide-password hidden" name="hide-password">
+                            <img src="./images/closed-eye-icon.png">
+                        </button>
+                    </section>
+                    <section>
+                        <fieldset> 
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="signup1" name="alerts_signup" value="Email" />
+                                    <label for="signup1">Receive our newsletter</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="signup2" name="alerts_signup" value="Text" />
+                                    <label for="signup2">Receive text alerts</label>
+                                    <div class="phone-dropdown hidden">
+                                        <label>Phone</label>
+                                        <input type="tel">
+                                    </div>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </section>
+                    <section>
+                        <button>Create Account</button>
+                        <p class="small">
+                            Already Have an Account? <a href="https://wwww.google.com">Sign In</a>
+                        </p>
+                    </section>
+                </form>
+            </div>
+        </div>
+	</body>
+</html>
