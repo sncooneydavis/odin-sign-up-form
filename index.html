@@ -7,6 +7,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <script src="./script.js" defer></script>
 		<title>SNCD Sign Up</title>
 	</head>
 	<body>
@@ -32,29 +33,29 @@
                         <input id="email" type="email" autocomplete="email">
                     </section>
                     <section class="input-field password-field">
-                        <label>Password:</label>
+                        <label for="new-password">Password:</label>
                         <span class="hint hidden">
                             <p class="hint length hidden">1. Must be 8 characters or more.</p>
                             <p class="hint letter hidden">2. Must contain a letter.</p>
                             <p class="hint number hidden">3. Must contain a number.</p>
                         </span>
-                        <input id="password" type="new-password" autocomplete="off">
-                        <button type="button" class="show-password" name="show-password">
+                        <input id="new-password" type="password" autocomplete="new-password">
+                        <button type="button" class="show password" name="show-password">
                             <img src="./images/open-eye-icon.png">
                         </button>
-                        <button type="button" class="hide-password hidden" name="hide-password">
-                            <img src="./images/closed-eye-icon.png">
+                        <button type="button" class="hide password hidden" name="hide-password">
+                            <img class="closed" src="./images/closed-eye-icon.png">
                         </button>
                     </section>                
                     <section class="input-field password-field">
-                        <label>Confirm Password:</label>
+                        <label for="confirm-password">Confirm:</label>
                         <span class="hint hidden"> passwords must match.</span>
-                        <input type="new-password" autocomplete="off">
-                        <button type="button" class="show-password" name="show-password">
+                        <input id="confirm-password" type="password" autocomplete="new-password">
+                        <button type="button" class="show passwordConfirm" name="show-confirmation-password">
                             <img src="./images/open-eye-icon.png">
                         </button>
-                        <button type="button" class="hide-password hidden" name="hide-password">
-                            <img src="./images/closed-eye-icon.png">
+                        <button type="button" class="hide passwordConfirm hidden" name="hide-confirmation-password">
+                            <img class="closed" src="./images/closed-eye-icon.png">
                         </button>
                     </section>
                     <section>
@@ -67,10 +68,10 @@
                                 <li>
                                     <input type="checkbox" id="signup2" name="alerts_signup" value="Text" />
                                     <label for="signup2">Receive text alerts</label>
-                                    <div class="phone-dropdown hidden">
-                                        <label>Phone</label>
-                                        <input type="tel">
-                                    </div>
+                                </li>
+                                <li class="phone-dropdown hidden">
+                                    <label for="phone-input">Phone</label>
+                                    <input id="phone-input" type="tel" autocomplete="tel">
                                 </li>
                             </ul>
                         </fieldset>
