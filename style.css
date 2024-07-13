@@ -37,10 +37,6 @@ ul {
 	list-style: none; 
 	padding-inline: 0; 
 } 
-img, picture, video, canvas, svg {
-	display: block;
-	max-width: 100%;
-}
 p {
 	overflow-wrap: break-word;
 	hyphens: auto;
@@ -135,11 +131,15 @@ h1 {
 .hidden {
     display: none;
 }
+li.hidden {
+    display: none;
+}
 label {
     font-size: 85%;
     line-height: 1.25;
+    width: fit-content;
 }
-.input-field {
+.input.section {
     display: flex;
     flex-direction: column;
 }
@@ -224,7 +224,8 @@ a:hover {
     font-style: italic;
     font-weight: bold;
 }
-section.password-field {
+section.new-password,
+section.confirm-password {
     position: relative;
 }
 button.show, 
@@ -234,18 +235,8 @@ button.hide {
     border: none;
     background-color: transparent;
     opacity: 50%;
-}
-button.show {
-    top: 55%;
-    left: 90%;
-}
-button.hide {
-    top: 67%;
-    left: 91%;
-}
-button.hide,
-.closed {
-    width: 26%;
+    top: 1.5em;
+    right: 0em;
 }
 button.show:hover,
 button.hide:hover {
@@ -255,4 +246,15 @@ ul li:last-child {
     background-color: rgba(255, 255, 255, 0.7);
     flex-direction: column;
     padding: 0.9em 1em 1.2em 1em;
+}
+
+span {
+    font-size: x-small;
+}
+.bad-input {
+    color: var(--flame);
+}
+.hint,
+.dropdown-hint {
+    font-size: x-small;
 }

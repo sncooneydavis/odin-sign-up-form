@@ -20,26 +20,23 @@
             </div>
             <div class="right panel">
                 <h1>Create a New Account</h1>
-                <form method="post">
-                    <section class="input-field">
-                        <label for="name">Full Name:</label>
-                        <span class="hint hidden"> enter first and last name.</span>
-                        <input id="name" type="text" autocomplete="name" autocapitalize="words">
-                       
+                <form id="sign-up-form"method="post">
+                    <section class="input section name">
+                        <label for="name" class="name">Full Name:</label>                    
+                        <input name="name" id="name" class="input field name" type="text" autocomplete="name" autocapitalize="words" pattern="^\w+\s+\w+.*$" required value=""> 
+                        <p class="hint name pattern hidden">Enter first and last name.</p>
                     </section>      
-                    <section class="input-field">
+                    <section class="input section email">
                         <label for="email">Email:</label>
-                        <span class="hint hidden"> enter a valid email.</span>
-                        <input id="email" type="email" autocomplete="email">
+                        <input name="email" id="email" class="input field email" type="email" autocomplete="email" required value="">
+                        <p class="hint email hidden">Enter a valid email.</p>
                     </section>
-                    <section class="input-field password-field">
-                        <label for="new-password">Password:</label>
-                        <span class="hint hidden">
-                            <p class="hint length hidden">1. Must be 8 characters or more.</p>
-                            <p class="hint letter hidden">2. Must contain a letter.</p>
-                            <p class="hint number hidden">3. Must contain a number.</p>
-                        </span>
-                        <input id="new-password" type="password" autocomplete="new-password">
+                    <section class="input section new-password">
+                        <label for="new-password">Password:</label>                 
+                        <input name="new-password" id="new-password" class="input field new-password" type="password" autocomplete="new-password" pattern="^(?=.*[A-Za-z])(?=.*\d).+$" minlength="8" required value="">
+                        <p class="hint new-password length hidden">Must be 8 characters or more.</p>
+                        <p class="hint new-password pattern hidden">Must contain a letter and a number.</p>       
+                        
                         <button type="button" class="show password" name="show-password">
                             <img src="./images/open-eye-icon.png">
                         </button>
@@ -47,10 +44,11 @@
                             <img class="closed" src="./images/closed-eye-icon.png">
                         </button>
                     </section>                
-                    <section class="input-field password-field">
-                        <label for="confirm-password">Confirm:</label>
-                        <span class="hint hidden"> passwords must match.</span>
-                        <input id="confirm-password" type="password" autocomplete="new-password">
+                    <section class="input section confirm-password">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input name="confirm-password" id="confirm-password" class="input field confirm-password" type="password" autocomplete="new-password" required value="">
+                        <p class="hint confirm-password hidden">Passwords must match.</p>
+                        
                         <button type="button" class="show passwordConfirm" name="show-confirmation-password">
                             <img src="./images/open-eye-icon.png">
                         </button>
@@ -62,22 +60,23 @@
                         <fieldset> 
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="signup1" name="alerts_signup" value="Email" />
-                                    <label for="signup1">Receive our newsletter</label>
+                                    <input name="newsletter-signup" id="newsletter-signup" type="checkbox" />
+                                    <label for="newsletter-signup">Receive our newsletter</label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="signup2" name="alerts_signup" value="Text" />
-                                    <label for="signup2">Receive text alerts</label>
+                                    <input name="alerts-signup" id="alerts-signup" type="checkbox" />
+                                    <label for="alerts-signup">Receive text alerts</label>
                                 </li>
-                                <li class="phone-dropdown hidden">
-                                    <label for="phone-input">Phone</label>
-                                    <input id="phone-input" type="tel" autocomplete="tel">
+                                <li class="phone dropdown hidden">
+                                    <label for="phone">Phone</label>
+                                    <input name="phone" id="phone" type="tel" autocomplete="tel" pattern="(?:.*\d){10}" value="">
+                                    <p class="dropdown-hint hidden">Provide phone number to get text alerts.</p>
                                 </li>
                             </ul>
                         </fieldset>
                     </section>
                     <section>
-                        <button>Create Account</button>
+                        <button type="submit">Create Account</button>
                         <p class="small">
                             Already Have an Account? <a href="https://wwww.google.com">Sign In</a>
                         </p>
